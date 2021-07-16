@@ -1,4 +1,10 @@
-# course-project
+# Course Project
+> this is a learning project
+
+
+
+## Description
+
 
 ## Project setup
 ```
@@ -19,6 +25,3 @@ npm run build
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

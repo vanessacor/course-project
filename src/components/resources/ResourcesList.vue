@@ -1,20 +1,26 @@
 <template>
   <ul>
-    <ResourcesListItem v-for="resource in resourceList" :key="resource.id" :item="resource" />
+    <ResourcesListItem
+      v-for="resource in storedResources"
+      :key="resource.id"
+      :item="resource"
+    />
   </ul>
 </template>
 
 <script>
-import ResourcesListItem from '@/components/resources/ResourcesListItem.vue';
+import ResourcesListItem from "@/components/resources/ResourcesListItem.vue";
 
 export default {
-  props: {
-    resourceList: {
-      type: Array,
-      required: true,
+  components: { ResourcesListItem },
+  inject: ["storedResources"],
+  methods: {
+    deleteResource(id) {
+      this.storedResources = this.storedResources.filter(
+        (resource) => resource.id !== id
+      );
     },
   },
-  components: { ResourcesListItem },
 };
 </script>
 

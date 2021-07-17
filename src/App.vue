@@ -1,43 +1,19 @@
 <template>
-  <Header />
+  <TheHeader />
   <main>
     <section>
-      <ResourcesList :resourceList="storedResources" />
+      <TheResources />
     </section>
   </main>
 </template>
 
 <script>
-import ResourcesList from '@/components/resources/ResourcesList.vue';
-import Header from '@/components/layout/Header.vue';
+import TheResources from "@/components/resources/TheResources.vue";
+import TheHeader from "@/components/layout/TheHeader.vue";
 
 export default {
-  name: 'App',
-  components: { Header, ResourcesList },
-  data() {
-    return {
-      storedResources: [
-        {
-          id: 'official-guide',
-          title: 'Official Guide',
-          description: 'The official guide to Vue.js',
-          link: 'https://vuejs.org',
-        },
-        {
-          id: 'mdn',
-          title: 'MDN Web Docs',
-          description: 'Resources for developers, by developers',
-          link: 'https://developer.mozilla.org/en-US',
-        },
-        {
-          id: 'vuex',
-          title: 'Vuex',
-          description: 'Documentation for VUEX',
-          link: 'https://vuex.vuejs.org/guide/',
-        },
-      ],
-    };
-  },
+  name: "App",
+  components: { TheHeader, TheResources },
 };
 </script>
 

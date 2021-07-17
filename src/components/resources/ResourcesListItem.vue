@@ -4,6 +4,7 @@
       <h3>{{ item.title }}</h3>
       <p>{{ item.description }}</p>
       <p><a :href="item.link">Link</a></p>
+      <base-button type="button" mode="danger">Delete</base-button>
     </base-card>
   </li>
 </template>
